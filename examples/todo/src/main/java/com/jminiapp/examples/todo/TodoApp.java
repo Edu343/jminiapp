@@ -62,10 +62,9 @@ public class TodoApp extends JMiniApp {
                 case "3" -> listTodos("pending");
                 case "4" -> listTodos("completed");
                 case "5" -> completeTodo();
-                case "6" -> editTodo();
-                case "7" -> deleteTodo();
-                case "8" -> exportData();
-                case "9" -> importData();
+                case "6" -> deleteTodo();
+                case "7" -> exportData();
+                case "8" -> importData();
                 case "0" -> running = false;
                 default -> System.out.println("Invalid option. Please try again.");
             }
@@ -93,10 +92,9 @@ public class TodoApp extends JMiniApp {
         System.out.println("3. List pending todos");
         System.out.println("4. List completed todos");
         System.out.println("5. Mark todo as complete/incomplete");
-        System.out.println("6. Edit todo");
-        System.out.println("7. Delete todo");
-        System.out.println("8. Export todos");
-        System.out.println("9. Import todos");
+        System.out.println("6. Delete todo");
+        System.out.println("7. Export todos");
+        System.out.println("8. Import todos");
         System.out.println("0. Exit");
         System.out.print("\nChoose an option: ");
     }
@@ -191,59 +189,6 @@ public class TodoApp extends JMiniApp {
             todo.toggleComplete();
 
             System.out.println("\nTodo updated:");
-            System.out.println(todo);
-
-        } catch (NumberFormatException e) {
-            System.out.println("Invalid input. Please enter a number");
-        }
-    }
-
-    /**
-     * Edits an existing todo
-     */
-    private void editTodo() {
-        if (todos.isEmpty()) {
-            System.out.println("\nNo todos available");
-            return;
-        }
-
-        listTodos("all");
-        System.out.print("\nEnter todo number to edit: ");
-
-        try {
-            int index = Integer.parseInt(scanner.nextLine().trim()) - 1;
-
-            if (index < 0 || index >= todos.size()) {
-                System.out.println("Invalid todo number");
-                return;
-            }
-
-            TodoItem todo = todos.get(index);
-            System.out.println("\nEditing: " + todo.getTitle());
-
-            System.out.print("New title [" + todo.getTitle() + "]: ");
-            String title = scanner.nextLine().trim();
-            if (!title.isEmpty()) {
-                todo.setTitle(title);
-            }
-
-            System.out.print("New description [" + todo.getDescription() + "]: ");
-            String description = scanner.nextLine().trim();
-            if (!description.isEmpty()) {
-                todo.setDescription(description);
-            }
-
-            System.out.print("New priority (HIGH/MEDIUM/LOW) [" + todo.getPriority() + "]: ");
-            String priorityInput = scanner.nextLine().trim().toUpperCase();
-            if (!priorityInput.isEmpty()) {
-                try {
-                    todo.setPriority(TodoItem.Priority.valueOf(priorityInput));
-                } catch (IllegalArgumentException e) {
-                    System.out.println("Invalid priority. Keeping current value");
-                }
-            }
-
-            System.out.println("\nTodo updated successfully!");
             System.out.println(todo);
 
         } catch (NumberFormatException e) {

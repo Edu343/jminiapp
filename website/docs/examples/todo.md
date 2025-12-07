@@ -7,7 +7,7 @@ sidebar_position: 2
 A todo list manager demonstrating CRUD operations, multiple format adapters, and import strategies.
 
 **Features:**
-- Add, edit, delete todos
+- Add and delete todos
 - Mark todos as complete/incomplete
 - Priority levels (HIGH, MEDIUM, LOW)
 - JSON and CSV import/export
@@ -186,10 +186,9 @@ Loaded 3 existing todo(s)
 3. List pending todos
 4. List completed todos
 5. Mark todo as complete/incomplete
-6. Edit todo
-7. Delete todo
-8. Export todos
-9. Import todos
+6. Delete todo
+7. Export todos
+8. Import todos
 0. Exit
 
 Choose an option: 1
@@ -200,7 +199,7 @@ Description: Add JWT-based auth to the API
 Priority (HIGH/MEDIUM/LOW) [MEDIUM]: HIGH
 
 Todo added successfully!
-[ ] !!! Implement authentication - Add JWT-based auth to the API
+[ ] [HIGH] Implement authentication - Add JWT-based auth to the API
     ID: 7c9e6679-7425-40de-944b-e07fc1f90ae7 | Created: 2024-01-15T14:30:00
 ```
 

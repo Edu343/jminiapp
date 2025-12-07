@@ -123,11 +123,11 @@ public class TodoItem {
      */
     @Override
     public String toString() {
-        String status = completed ? "✓" : " ";
+        String status = completed ? "X" : " ";
         String prioritySymbol = switch (priority) {
-            case HIGH -> "!!!";
-            case MEDIUM -> "!!";
-            case LOW -> "!";
+            case HIGH -> "[HIGH]";
+            case MEDIUM -> "[MED]";
+            case LOW -> "[LOW]";
         };
 
         return String.format("[%s] %s %s - %s\n    ID: %s | Created: %s",
