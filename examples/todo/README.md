@@ -15,10 +15,10 @@ This example shows how to build a small command-line application that manages a 
 * **Priority**: Tasks can be marked with High, Medium, or Low priority.
 * **Persistent State**: All tasks are automatically saved when you exit the app.
 
----
 
 ## Project Structure
 
+```
 todo/
 ├── pom.xml
 ├── README.md
@@ -29,8 +29,6 @@ todo/
     ├── TodoCSVAdapter.java   # CSV format adapter
     ├── Todo.json        # Persistent data 
     └── TodoJSONAdapter.java  # JSON format adapter
-
-
 ---
 
 ## Key Components
