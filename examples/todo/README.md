@@ -19,15 +19,16 @@ This example shows how to build a small command-line application that manages a 
 
 ## Project Structure
 
-
-todo/ 
-  ├── pom.xml 
-  ├── README.md 
-  └── src/main/java/com/jminiapp/examples/todo/ 
-    ├── TodoAppRunner.java # Setup and launch configuration 
-    ├── TodoItem.java # The model for a single task 
-    ├── TodoJSONAdapter.java # Handles saving/loading data in JSON format 
-    └── TodoCSVAdapter.java # Handles saving/loading data in CSV format
+todo/
+├── pom.xml
+├── README.md
+└── src/main/java/com/jminiapp/examples/todo/
+    ├── TodoApp.java          # Main application class
+    ├── TodoAppRunner.java    # Bootstrap configuration
+    ├── TodoItem.java        # Data model 
+    ├── TodoCSVAdapter.java   # CSV format adapter
+    ├── Todo.json        # Persistent data 
+    └── TodoJSONAdapter.java  # JSON format adapter
 
 
 ---
@@ -68,6 +69,10 @@ mvn clean install
  ```bash
 
 cd examples/todo
+
+```
+
+```bash
 
 mvn exec:java
 
