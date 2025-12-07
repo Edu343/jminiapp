@@ -29,7 +29,8 @@ todo/
     ├── TodoCSVAdapter.java   # CSV format adapter
     ├── Todo.json        # Persistent data 
     └── TodoJSONAdapter.java  # JSON format adapter
----
+```
+
 
 ## Key Components
 
