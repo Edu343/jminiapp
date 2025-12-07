@@ -65,7 +65,11 @@ mvn clean install
 
  ### Run Todo
 
+ ```bash
+
 cd examples/todo
+
 mvn exec:java
 
+```
 
