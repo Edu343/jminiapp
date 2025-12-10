@@ -1,0 +1,26 @@
+[
+  {
+    "id": "550e8400-e29b-41d4-a716-446655440000",
+    "title": "Complete JMiniApp tutorial",
+    "description": "Follow the step-by-step guide to build the todo list app",
+    "completed": false,
+    "priority": "HIGH",
+    "createdAt": "2024-01-15T10:30:00"
+  },
+  {
+    "id": "550e8400-e29b-41d4-a716-446655440001",
+    "title": "Test JSON export",
+    "description": "Export the todo list to a JSON file",
+    "completed": false,
+    "priority": "MEDIUM",
+    "createdAt": "2024-01-15T11:00:00"
+  },
+  {
+    "id": "550e8400-e29b-41d4-a716-446655440002",
+    "title": "Test CSV import",
+    "description": "Import todos from a CSV file using MERGE_BY_ID strategy",
+    "completed": false,
+    "priority": "MEDIUM",
+    "createdAt": "2024-01-15T11:15:00"
+  }
+]
